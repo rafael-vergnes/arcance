@@ -92,10 +92,12 @@ arcance/
    - Créer le fichier `env.php` à la racine de votre projet et y renseigner vos identifiants de connexion :
      ```php
      <?php
-     define('DB_HOST', 'localhost');
-     define('DB_NAME', 'arcance');
-     define('DB_USER', 'root');
-     define('DB_PASSWORD', '');
+     <?php
+
+     const DB_HOST = "localhost";
+     const DB_NAME = "arcance";
+     const DB_USER = "root";
+     const DB_PASSWORD = "";
      ```
 
 4. **Démarrer le serveur local PHP :**
