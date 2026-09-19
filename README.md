@@ -1,6 +1,6 @@
 # Drive - Application Web de Stockage de Fichiers
 
-> **Statut du projet :** En cours de développement (Partie Front-End)  
+> **Statut du projet :** En cours de développement
 > Projet réalisé dans le cadre de ma formation de **Développeur Web & Web Mobile** (ADRAR Pôle Numérique) afin de valider et mettre en pratique mes compétences.
 
 ---
@@ -28,8 +28,9 @@ L'objectif de ce projet est de concevoir une application web responsive de stock
 - **CSS3 :** Design moderne, Flexbox, CSS Grid et Media Queries pour le responsive design.
 - **JavaScript :** Dynamisation de l'interface, manipulation du DOM et gestion des interactions utilisateur.
 
-### Back-End & Base de Données (À venir)
-- **PHP :** Logique serveur, manipulation du système de fichiers (*upload/download*) et gestion des sessions.
+### Back-End & Base de Données (En cours)
+- **PHP (Architecture MVC) :** Logique serveur, orientation objet, routage et séparation des responsabilités.
+- **Composer :** Gestion des dépendances et autoloading PSR-4 avec des namespaces simplifiés.
 - **SQL / MySQL :** Conception de la base de données relationnelle pour la gestion des utilisateurs, des métadonnées des fichiers et de l'arborescence des dossiers.
 
 ---
@@ -38,18 +39,69 @@ L'objectif de ce projet est de concevoir une application web responsive de stock
 
 Afin de garantir une démarche de développement rigoureuse, la phase de conception a débuté par la modélisation des besoins utilisateurs. 
 
-- **Diagramme d'utilisation UML :** Disponible à la racine du dépôt (`diagramme_cas_d_utilisation.jpg`) pour illustrer les fonctionnalités et parcours utilisateurs.
+- **Diagramme de cas d'utilisation UML :** Disponible dans le dossier `docs/use_case/` pour illustrer les fonctionnalités et parcours utilisateurs.
+- **MCD / MLD :** Modélisation de la base de données disponible dans `docs/mcd_mld/`.
 
 ---
 
-## Structure du Projet
+## Structure du projet
 
 ```text
-├── diagramme_cas_d_utilisation.jpg   # Modélisation UML des besoins
-└── front/                            # Partie Front-End
-    ├── accueil.html                  # Page d'accueil / Tableau de bord responsive
-    ├── style.css                     # Feuilles de style global
-    └── main.js                       # Scripts et dynamisme JavaScript
+arcance/
+├── App/                  # Code source applicatif (MVC)
+│   ├── Controller/       # Contrôleurs de l'application
+│   ├── Model/            # Modèles et gestion des données
+│   ├── Utils/            # Classes utilitaires et helpers
+│   └── View/             # Composants et vues d'affichage
+├── database/             # Scripts et dumps de la base de données
+│   └── db.sql
+├── docs/                 # Documentation et schémas de conception
+│   ├── mcd_mld/          # Modèles conceptuels et logiques des données
+│   └── use_case/         # Diagrammes de cas d'utilisation
+├── public/               # Racine web publique
+│   ├── assets/           # Ressources statiques
+│   │   ├── img/          # Images
+│   │   ├── scripts/      # Fichiers JavaScript
+│   │   └── styles/       # Feuilles de style CSS
+│   └── index.php         # Point d'entrée unique de l'application
+├── vendor/               # Dépendances gérées par Composer (ignoré par Git)
+├── .gitignore            # Fichiers et dossiers ignorés par Git
+├── .htaccess             # Configuration de la réécriture d'URL Apache
+├── composer.json         # Configuration Composer et autoloading PSR-4
+├── env.php               # Variables d'environnement (ignoré par Git)
+└── README.md             # Documentation du projet
+```
 
+---
 
+## 🚀 Installation & Lancement en local
 
+1. **Cloner le dépôt Git :**
+   ```bash
+   git clone <URL_DE_TON_DEPOT>
+   cd arcance
+   ```
+
+2. **Installer les dépendances Composer :**
+   ```bash
+   composer install
+   ```
+
+3. **Configurer la base de données :**
+   - Importer le fichier `database/db.sql` dans votre gestionnaire MySQL (phpMyAdmin, DBeaver, etc.).
+   - Créer le fichier `env.php` à la racine de votre projet et y renseigner vos identifiants de connexion :
+     ```php
+     <?php
+     define('DB_HOST', 'localhost');
+     define('DB_NAME', 'arcance');
+     define('DB_USER', 'root');
+     define('DB_PASSWORD', '');
+     ```
+
+4. **Démarrer le serveur local PHP :**
+   ```bash
+   php -S 127.0.0.1:8000 -t public
+   ```
+
+5. **Accéder à l'application :**
+   Ouvrir votre navigateur sur [http://127.0.0.1:8000](http://127.0.0.1:8000).
