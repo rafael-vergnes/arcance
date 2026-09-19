@@ -1,6 +1,6 @@
 # Drive - Application Web de Stockage de Fichiers
 
-> **Statut du projet :** En cours de développement
+> **Statut du projet :** En cours de développement 
 > Projet réalisé dans le cadre de ma formation de **Développeur Web & Web Mobile** (ADRAR Pôle Numérique) afin de valider et mettre en pratique mes compétences.
 
 ---
