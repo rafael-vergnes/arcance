@@ -92,7 +92,6 @@ arcance/
    - Créer le fichier `env.php` à la racine de votre projet et y renseigner vos identifiants de connexion :
      ```php
      <?php
-     <?php
 
      const DB_HOST = "localhost";
      const DB_NAME = "arcance";
