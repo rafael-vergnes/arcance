@@ -1,9 +1,9 @@
 /* SELECTION ET CREATION DE VARIABLE */
 
-let menu_burger = document.body.querySelector("#menu_burger");
+let menu_burger = document.querySelector("#menu_burger");
 console.log(menu_burger);
 
-let inside_burger = document.body.querySelector("#inside_burger");
+let inside_burger = document.querySelector("#inside_burger");
 console.log(inside_burger);
 
 let isClicked_burger = false;

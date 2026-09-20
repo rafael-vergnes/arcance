@@ -2,8 +2,6 @@
 
 namespace View;
 
-use View\View;
-
 class ViewHeader{
 
     private ?string $title;
