@@ -19,10 +19,11 @@ class ViewHome extends View {
 <main aria-label="menu principal">
     <div id="head_main">
         <h3>Bienvenue Rafaël</h3>
-        <label for="recherche" method="HOST"></label>
-        <input aria-label="rechercher" type="text" name="recherche" id="recherche" placeholder="Recherche">
+        <form method="GET" action="search">
+            <input aria-label="rechercher" type="text" name="recherche" id="recherche" placeholder="Recherche">
+        </form>
     </div>
-
+    <div id="files_container">
     <?php
         foreach($this->getData() as $row) {
     ?>
@@ -30,7 +31,7 @@ class ViewHome extends View {
     <?php
         }
     ?>
-
+    </div>
     <div id="conteneur_bouton_plus">
         <button aria-label="ajouter un document"><img id= "bouton_plus" src="./assets/img/logo_plus.svg" alt="bouton plus"></button>
     </div>

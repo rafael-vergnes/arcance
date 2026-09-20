@@ -13,4 +13,9 @@ class Utils {
             ]
         );
     }
+
+    public static function sanitize(string $str):string {
+    return 
+        htmlspecialchars(strip_tags(trim($str)), ENT_COMPAT);
+    }
 }

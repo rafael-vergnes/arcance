@@ -21,11 +21,11 @@ $path = isset($url['path']) ? $url['path'] : '/';
 //On appelle le contrôleur lié à la route demandée
 switch ($path) {
     case '/':
-        $controller = new ControllerHome(new ModelFile(Utils::connect()),new ViewHome("Accueil", "./assets/styles/home.css", ""));
+        $controller = new ControllerHome(new ModelFile(Utils::connect()),new ViewHome("Accueil", "./assets/styles/home.css", "./assets/scripts/home.js"));  
         $controller->render();
         break;
-    case '/test':
-        $view = new ModelFile(Utils::connect());
-        var_dump($view->findAll());
+    case '/search':
+        $controller = new ControllerHome(new ModelFile(Utils::connect()),new ViewHome("Accueil", "./assets/styles/home.css", "./assets/scripts/home.js"));  
+        $controller->searchFile();
         break;
 }

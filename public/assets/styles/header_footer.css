@@ -82,6 +82,7 @@ header button:first-child {
     display: grid;
     grid-template-rows: auto;
     padding: 1rem;
+    bottom: 0;
 }
 
 .logo_reseaux {
