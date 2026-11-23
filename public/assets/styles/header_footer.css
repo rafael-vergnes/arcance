@@ -104,6 +104,7 @@ header button:first-child {
     text-align: center;
     justify-content: center;
     padding: 1rem;
+    gap: 5px;
 }
 
 #plan_site {
@@ -113,6 +114,7 @@ header button:first-child {
     color: white;
     text-align: center;
     justify-content: center;
+    gap: 5px;
 }
 
 #plan_site p {

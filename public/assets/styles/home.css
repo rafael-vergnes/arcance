@@ -43,15 +43,17 @@ main h3 {
 
 .pdf {
     width: 2rem;
+    margin-left: 5px;
 }
 
 main button {
     display: flex;
     align-items: center;
+    padding: 10px;
 }
 
 main img {
-    width: 0.25rem;
+    width: 0.3rem;
 }
 
 #conteneur_bouton_plus {

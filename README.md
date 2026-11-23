@@ -88,7 +88,7 @@ arcance/
    ```
 
 3. **Configurer la base de données :**
-   - Importer le fichier `database/db.sql` dans votre gestionnaire MySQL (phpMyAdmin, DBeaver, etc.).
+   - Importer les fichiers `database/script_db.sql` et `database/template_files.sql` dans votre gestionnaire MySQL.
    - Créer le fichier `env.php` à la racine de votre projet et y renseigner vos identifiants de connexion :
      ```php
      <?php
@@ -96,7 +96,7 @@ arcance/
      const DB_HOST = "localhost";
      const DB_NAME = "arcance";
      const DB_USERNAME = "root";
-     const DB_PASSWORD = "";
+     const DB_PASSWORD = "root";
      ```
 
 4. **Démarrer le serveur local PHP :**

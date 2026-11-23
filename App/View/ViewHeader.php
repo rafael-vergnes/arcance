@@ -27,9 +27,11 @@ class ViewHeader{
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Application web de stockage de fichiers">
     <title><?= $this->title ?></title>
     <link rel="stylesheet" href="./assets/styles/header_footer.css">
     <link rel="stylesheet" href="<?= $this->linkCss ?>">
+    <link rel="icon" type="image/svg+xml" href="./assets/img/favicon.svg">
     <script defer type="module" src="./assets/scripts/header.js"></script>
     <script defer type="module" src="<?= $this->linkJs ?>"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
